@@ -40,11 +40,11 @@ header li {
     margin: auto;
 }
 
-header #logo {
+#logo {
     float: none;
 }
 
-header #logo h1{
+h1{
     margin:0;
 }
 
@@ -55,11 +55,6 @@ header nav {
     padding-bottom: 10px;
 }
 
-header .active a {
-    color:#1d08b3;
-    font-weight: bold;
-}
-
 header a:hover {
     color: #1d08B3;
     font-weight: bold;
@@ -67,7 +62,7 @@ header a:hover {
 
 #main {
     min-height: 600px;
-    background: url("../img/losangeles.jpg") no-repeat center center;
+    background: url(../img/losangeles.jpg) no-repeat center center;
     background-size: cover;
     text-align: center;
     color: #daa520;
@@ -78,7 +73,7 @@ h2 {
     font-size: 2em;
 }
 
-#main h1 {
+h1 {
     margin: 140px 0 10px 0;
     font-family: 'Dancing Script', cursive;
     font-size: 6em;
@@ -90,14 +85,31 @@ h2 {
 }
 
 #projects {
-    margin-top: 20px;
+    text-align: center;
 }
 
-#projects .project {
-    float: left;
-    text-align: center;
-    width: 100%;
+.container-box img {
+    width: 80%;
+    padding-right: 10px;
+    height: auto;
 }
+
+.project-1 {
+    flex: 1;
+    max-width: 100%;
+    min-height: auto;
+}
+
+.project-2 {
+    flex: 1;
+    max-width: 100%;
+}
+
+.project-3 {
+    flex: 1;
+    max-width: 100%;
+}
+
 
 footer {
     padding: 30px;
@@ -112,6 +124,31 @@ footer {
 }
 
 /* queries */
+/*Iphone 5 and 7*/
+@media screen and (min-width: 320px) and (max-width: 768px) {
+header {
+    text-align: center;
+    max-width: 100%;
+    padding-bottom: 30px;
+}
+header nav {
+    float: none;
+    text-align: center;
+    display: inline-block;
+    }
+h1 {
+    font-size: 4em !important;
+    }
+
+#main p {
+    font-size: 3em !important;
+}
+
+.container-box {
+    flex-direction: column;
+    }
+}
+
 
 /* Ipad */
 @media screen and (min-width: 768px) {
@@ -125,7 +162,7 @@ footer {
         padding-top:10px;
     }
 
-    header #logo {
+    #logo {
         float: left;
     }
 
@@ -145,43 +182,27 @@ footer {
         font-size: 1.8em;
     }
 
-    #projects {
-        margin-right: auto;
-        margin-left: auto;
-        text-align: center;
+    .container-box {
+        display: flex;
+        justify-content: center;
     }
 
+    .project-1 {
+        flex: 1;
+    }
+    
+    .project-2 {
+        flex: 1;
+    }
+
+    .project-3 {
+        flex: 1;
+    }
 }
 /* Ipad Pro*/
 @media screen and (min-width:769px) and (max-width: 1024px) {
     header nav {
         font-size: 1.2em;
         padding-top: 10px;
-    }
-    
-    #projects .project {
-        text-align: center;
-        width: 45%;
-    }
-}
-
-/* Minor break point*/
-@media screen and (min-width:1025px) and (max-width: 1292px) {
-    #projects .project {
-        text-align: center;
-        width: 40%;
-        padding-right: 10px;
-        float: left;
-        margin: auto;
-    }
-}
-
-@media screen and (min-width: 1293px) {
-    #projects .project {
-        text-align: center;
-        width: 30%;
-        padding-right: 10px;
-        float: left;
-        margin: auto;
     }
 }
